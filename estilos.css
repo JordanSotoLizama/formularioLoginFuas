@@ -1,0 +1,109 @@
+body {
+    /* background: #ffe259; */
+    background: linear-gradient(to right, #644494, #9866e4);
+}
+
+.navbar-light {
+    background-color: #34bceb;
+}
+
+.navbar-light .navbar-toggler {
+    color: #2c1a47;
+    border-color: #644494;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url(imagenes/burgermenu.png);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #644494;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #644494;
+}
+
+.caja {
+    background-color: #34bceb;
+}
+
+.form-control {
+    border: 1px solid #644494;
+}
+
+.form-check-input {
+    border: 1px solid #644494;
+}
+
+.btn-outline-success {
+    color: #644494;
+    border-color: #644494;
+}
+
+.dropdown-menu {
+    background-color: #644494;
+}
+
+.bg {
+    background-image: url(imagenes/toreto3.jpg);
+    background-position: center center;
+}
+
+.textoFooter {
+    color: white;
+    padding-top: 30px;
+}
+
+.text {
+    color: white;
+}
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 75px;
+    width: 100%;
+    background: #34bceb;
+}
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+input.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+
+.textoInformacion {
+    text-align: center;
+}
+
+.btn-enviar {
+    background-color: #644494;
+    border-color: white;
+    color: white;
+}
+
+.btn {
+    background-color: #644494;
+    border-color: white;
+    color: white;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #333;
+    height: 0;
+}
+
+
+/*ABAJO NO MIO*/

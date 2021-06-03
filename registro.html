@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contacto</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#basic-form").validate();
+
+            $("#nom1").hide();
+            $("#apPat1").hide();
+            $("#int1").hide();
+            $("#hr1").hide();
+            $("#apMat1").hide();
+            $("#rut1").hide();
+            $("#edad1").hide();
+            $("#estCiv1").hide();
+            $("#parent1").hide();
+            $("#preb1").hide();
+            $("#act1").hide();
+            $("#nivEs1").hide();
+            $("#nom2").hide();
+            $("#apPat2").hide();
+            $("#int2").hide();
+            $("#apMat2").hide();
+            $("#rut2").hide();
+            $("#edad2").hide();
+            $("#estCiv2").hide();
+            $("#parent2").hide();
+            $("#preb2").hide();
+            $("#act2").hide();
+            $("#nivEs2").hide();
+
+
+
+
+
+
+
+            $("#radio1").click(function() {
+                $("#int1").show();
+                $("#nom1").show();
+                $("#apPat1").show();
+                $("#hr1").show();
+                $("#apMat1").show();
+                $("#rut1").show();
+                $("#edad1").show();
+                $("#estCiv1").show();
+                $("#parent1").show();
+                $("#preb1").show();
+                $("#act1").show();
+                $("#nivEs1").show();
+                $("#nom2").hide();
+                $("#apPat2").hide();
+                $("#int2").hide();
+                $("#apMat2").hide();
+                $("#rut2").hide();
+                $("#edad2").hide();
+                $("#estCiv2").hide();
+                $("#parent2").hide();
+                $("#preb2").hide();
+                $("#act2").hide();
+                $("#nivEs2").hide();
+            });
+
+            $("#radio2").click(function() {
+                $("#int1").show();
+                $("#nom1").show();
+                $("#apPat1").show();
+                $("#hr1").show();
+                $("#apMat1").show();
+                $("#rut1").show();
+                $("#edad1").show();
+                $("#estCiv1").show();
+                $("#parent1").show();
+                $("#preb1").show();
+                $("#act1").show();
+                $("#nivEs1").show();
+                $("#int2").show();
+                $("#nom2").show();
+                $("#apPat2").show();
+                $("#int2").show();
+                $("#apMat2").show();
+                $("#rut2").show();
+                $("#edad2").show();
+                $("#estCiv2").show();
+                $("#parent2").show();
+                $("#preb2").show();
+                $("#act2").show();
+                $("#nivEs2").show();
+            });
+
+            $("#btnLimpiar").click(function() {
+                $("#int1").hide();
+                $("#nom1").hide();
+                $("#apPat1").hide();
+                $("#hr1").hide();
+                $("#apMat1").hide();
+                $("#rut1").hide();
+                $("#edad1").hide();
+                $("#estCiv1").hide();
+                $("#parent1").hide();
+                $("#preb1").hide();
+                $("#act1").hide();
+                $("#nivEs1").hide();
+                $("#nom2").hide();
+                $("#apPat2").hide();
+                $("#int2").hide();
+                $("#apMat2").hide();
+                $("#rut2").hide();
+                $("#edad2").hide();
+                $("#estCiv2").hide();
+                $("#parent2").hide();
+                $("#preb2").hide();
+                $("#act2").hide();
+                $("#nivEs2").hide();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/Logo1.jpg" alt="Fuas 2021 Img" width="150 rem">
+                <img src="imagenes/Logo2.png" alt="Ministerio de educación Img" width="65 rem">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="registro.html">Registro Postulación</a>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contactanos</a>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Cerrar Sesión</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container w-50  mt-5 mb-5 rounded shadow">
+
+        <h2 class="text fw-bold text-center py-3">Formulario de Acreditación Socioeconómica 2021</h2>
+
+
+        <form action="#" id="basic-form" method="POST">
+            <div class="mb-4">
+                <label for="Nombre" class="text form-label">Nombre</label>
+                <input type="text" class="form-control" name="name" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="rut" class="text form-label">Rut</label>
+                <input type="text" class="form-control" name="rut" required>
+            </div>
+
+            <hr>
+
+            <h4 class="text fw-bold text-center py-3">Datos del alumno</h4>
+
+            <div class="mb-4">
+                <label for="estCiv" class="text form-label">Estado Civil</label>
+                <input type="text" class="form-control" name="estCiv" required>
+            </div>
+
+            <div class="container mb-4">
+
+                <fieldset>
+                    <label for="Nacio" class="text form-label">Nacionalidad</label>
+                    <br>
+                    <label>
+                        <input type="radio" class="radio" name="nacionalidad" value="Chilena" required> Chilena
+                      </label>
+                    <label>
+                          <input type="radio" class= "radio" name="nacionalidad" value="Extranjera con permanencia definitiva" required> Extranjera con permanencia definitiva
+                      </label>
+                    <label>
+                          <input type="radio" class ="radio" name="nacionalidad" value="Extranjera con residencia" required> Extranjera con residencia
+                      </label>
+                </fieldset>
+
+            </div>
+
+            <div class="mb-4">
+                <label for="act" class="text form-label">Actividad</label>
+                <input type="text" class="form-control" name="act" required>
+            </div>
+
+            <div class="container mb-4">
+
+                <fieldset>
+                    <label for="estu" class="text form-label">¿Cursaste los 2 ultimos años de enseñanza escolar en el extranjero?</label>
+                    <br>
+                    <label>
+                        <input type="radio" class="radio" name="enzExt" value="Si" required> Si
+                      </label>
+                    <label>
+                          <input type="radio" class= "radio" name="enzExt" value="No" required> No
+                      </label>
+                </fieldset>
+
+            </div>
+
+            <div class="container mb-4">
+
+                <fieldset>
+                    <label for="disc" class="text form-label">¿Tienes alguna discapacidad?</label>
+                    <br>
+                    <label>
+                        <input type="radio" class="radio" name="disc" value="Si" required> Si
+                      </label>
+                    <label>
+                          <input type="radio" class= "radio" name="disc" value="No" required> No
+                      </label>
+                </fieldset>
+
+            </div>
+
+            <div class="mb-4">
+                <label for="pueOrg" class="text form-label">¿A que pueblo originario perteneces?</label>
+                <input type="text" class="form-control" name="pueOrg" required>
+            </div>
+
+            <div class="container mb-4">
+
+                <fieldset>
+                    <label for="edSup" class="text form-label">Cuenta de ahorro para estudiantes en Educación Superior</label>
+                    <br>
+                    <label>
+                        <input type="radio" class="radio" name="edSup" value="Si" required> Si
+                      </label>
+                    <label>
+                          <input type="radio" class= "radio" name="edSup" value="No" required> No
+                      </label>
+                </fieldset>
+
+            </div>
+
+            <hr>
+
+            <h4 class="text fw-bold text-center py-3">Antecedentes Académicos</h4>
+
+            <div class="mb-4">
+                <label for="promNot" class="text form-label">Promedio Notas de Enseñanza Media</label>
+                <input type="text" class="form-control" name="promNot" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="instEdSup" class="text form-label">Institución de Educación Superior donde te encuentras estudiando</label>
+                <input type="text" class="form-control" name="instEdSup" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="ultAñoMa" class="text form-label">Último año de matricula es institución de Educación Superior</label>
+                <input type="text" class="form-control" name="ultAñoMa" required>
+            </div>
+
+            <hr>
+
+            <h4 class="text fw-bold text-center py-3">Integrantes del grupo familiar</h4>
+
+            <div class="container mb-4">
+
+                <fieldset>
+                    <label for="numInt" class="text form-label">Numero de integrantes del grupo familiar</label>
+                    <br>
+                    <label>
+                        <input type="radio" id="radio1" class="radio" name="numInt" value="1" required> 1   
+                      </label>
+                    <label>
+                          <input type="radio" id="radio2" class= "radio" name="numInt" value="2" required> 2
+                      </label>
+                </fieldset>
+
+            </div>
+
+            <hr>
+
+            <label id="int1" for="int1" class="text form-label">Intengrante número 1</label>
+
+            <div class="mb-4" id="nom1">
+                <label for="nom1" class="text form-label">Nombres</label>
+                <input type="text" class="form-control" name="nom1" required>
+            </div>
+
+            <div class="mb-4" id="apPat1">
+                <label for="apPat1" class="text form-label">Apellido Paterno</label>
+                <input type="text" class="form-control" name="apPat1" required>
+            </div>
+
+            <div class="mb-4" id="apMat1">
+                <label for="apMat1" class="text form-label">Apellido Materno</label>
+                <input type="text" class="form-control" name="apMat1" required>
+            </div>
+
+            <div class="mb-4" id="rut1">
+                <label for="rut1" class="text form-label">Rut</label>
+                <input type="text" class="form-control" name="rut1" required>
+            </div>
+
+            <div class="mb-4" id="edad1">
+                <label for="edad1" class="text form-label">Edad</label>
+                <input type="text" class="form-control" name="edad1" required>
+            </div>
+
+            <div class="mb-4" id="estCiv1">
+                <label for="estCiv1" class="text form-label">Estado Civil</label>
+                <input type="text" class="form-control" name="estCiv1" required>
+            </div>
+
+            <div class="mb-4" id="parent1">
+                <label for="parent1" class="text form-label">Parentesco</label>
+                <input type="text" class="form-control" name="parent1" required>
+            </div>
+
+            <div class="mb-4" id="preb1">
+                <label for="preb1" class="text form-label">Previsión Salud</label>
+                <input type="text" class="form-control" name="preb1" required>
+            </div>
+
+            <div class="mb-4" id="act1">
+                <label for="act1" class="text form-label">Actividad</label>
+                <input type="text" class="form-control" name="act1" required>
+            </div>
+
+            <div class="mb-4" id="nivEs1">
+                <label for="nivEs1" class="text form-label">Nivel de Estudios</label>
+                <input type="text" class="form-control" name="nivEs1" required>
+            </div>
+
+            <hr id="hr1">
+
+            <label id="int2" for="int2" class="text form-label">Intengrante número 2</label>
+
+            <div class="mb-4" id="nom2">
+                <label for="nom2" class="text form-label">Nombres</label>
+                <input type="text" class="form-control" name="nom2" required>
+            </div>
+
+            <div class="mb-4" id="apPat2">
+                <label for="apPat2" class="text form-label">Apellido Paterno</label>
+                <input type="text" class="form-control" name="apPat2" required>
+            </div>
+
+            <div class="mb-4" id="apMat2">
+                <label for="apMat2" class="text form-label">Apellido Materno</label>
+                <input type="text" class="form-control" name="apMat2" required>
+            </div>
+
+            <div class="mb-4" id="rut2">
+                <label for="rut2" class="text form-label">Rut</label>
+                <input type="text" class="form-control" name="rut2" required>
+            </div>
+
+            <div class="mb-4" id="edad2">
+                <label for="edad2" class="text form-label">Edad</label>
+                <input type="text" class="form-control" name="edad2" required>
+            </div>
+
+            <div class="mb-4" id="estCiv2">
+                <label for="estCiv2" class="text form-label">Estado Civil</label>
+                <input type="text" class="form-control" name="estCiv2" required>
+            </div>
+
+            <div class="mb-4" id="parent2">
+                <label for="parent2" class="text form-label">Parentesco</label>
+                <input type="text" class="form-control" name="parent2" required>
+            </div>
+
+            <div class="mb-4" id="preb2">
+                <label for="preb2" class="text form-label">Previsión Salud</label>
+                <input type="text" class="form-control" name="preb2" required>
+            </div>
+
+            <div class="mb-4" id="act2">
+                <label for="act2" class="text form-label">Actividad</label>
+                <input type="text" class="form-control" name="act2" required>
+            </div>
+
+            <div class="mb-4" id="nivEs2">
+                <label for="nivEs2" class="text form-label">Nivel de Estudios</label>
+                <input type="text" class="form-control" name="nivEs2" required>
+            </div>
+
+            <hr>
+
+            <h4 class="text fw-bold text-center py-3">Dirección del grupo familiar</h4>
+
+            <div class="mb-4">
+                <label for="direc" class="text form-label">Dirección</label>
+                <input type="text" class="form-control" name="direc" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="num" class="text form-label">Número</label>
+                <input type="text" class="form-control" name="num" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="dep" class="text form-label">Departamento</label>
+                <input type="text" class="form-control" name="dep" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="pobVill" class="text form-label">Población o Villa</label>
+                <input type="text" class="form-control" name="pobVill" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="reg" class="text form-label">Región</label>
+                <input type="text" class="form-control" name="reg" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="com" class="text form-label">Comuna</label>
+                <input type="text" class="form-control" name="com" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="ciu" class="text form-label">Ciudad</label>
+                <input type="text" class="form-control" name="ciu" required>
+            </div>
+
+            <hr>
+
+            <h4 class="text fw-bold text-center py-3">Teléfonos</h4>
+
+            <div class="mb-4">
+                <label for="codAr" class="text form-label">Código de área</label>
+                <input type="text" class="form-control" name="codAr">
+            </div>
+
+            <div class="mb-4">
+                <label for="telefFijo" class="text form-label">Teléfono fijo</label>
+                <input type="text" class="form-control" name="telefFijo">
+            </div>
+
+            <div class="mb-4">
+                <label for="cel" class="text form-label">Celular</label>
+                <input type="text" class="form-control" name="cel">
+            </div>
+
+            <div class="d-grid mb-4" id="btn-enviar">
+                <button type="submit" class="btn btn-primary" id="btnSubmit">Enviar</button>
+            </div>
+
+            <div class="d-grid mb-4" id="btnLimpiar">
+                <button type="reset" class="btn btn-primary">Limpiar</button>
+            </div>
+
+            <br>
+            <br>
+
+        </form>
+
+    </div>
+
+    <!--FOOTER-->
+
+    <footer id="footer">
+        <div class="row text-center footer">
+            <div class="col-md-4 mt-3">
+                <img src="imagenes/Logo2.png" width="50 rem" alt="">
+            </div>
+            <div class="col-md-4">
+                <p class="textoFooter">Sitio Desarrollado por Alumnos de DuocUC</p>
+
+            </div>
+            <div class="col-md-4 mt-3">
+                <img class="imagenLogoFooter" src="imagenes/Logo1.jpg" width="100 rem" alt="">
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>

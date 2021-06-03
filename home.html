@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información</title>
+
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilosAcordion.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
+
+
+    <script src="funcionAcordion.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.getJSON('https://mindicador.cl/api', function(data) {
+                var dailyIndicators = data;
+                $("<p/>", {
+                    html: '$' + dailyIndicators.uf.valor
+                }).appendTo("#traerUf");
+            }).fail(function() {
+                console.log('Error al consumir la API!');
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/Logo1.jpg" alt="Fuas 2021 Img" width="150 rem">
+                <img src="imagenes/Logo2.png" alt="Ministerio de educación Img" width="65 rem">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="registro.html">Registro Postulación</a>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contactanos</a>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Cerrar Sesión</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--INFORMACIÓN-->
+
+    <div class="container w-75  mt-5 mb-5 rounded shadow">
+
+        <h2 class="text fw-bold text-center py-5">BIENVENIDO AL SITIO WEB OFICIAL DEL FORMULARIO ÚNICO DE ACREDITACIÓN SOCIOECONÓMICA (FUAS)</h2>
+        <h1 class="text fw-bold py-3">Pregado</h1>
+        <p class="text fw-bold py-3">Recuerda que luego del proceso de llenado del Formulario Único de Acreditación Socioeconómica (FUAS), se entregarán resultados de Nivel Socieconómico, para finalizar con los resultados de Asignación. Las fechas serán entregadas a través de
+            <a class="textEnlace" href="https://portal.beneficiosestudiantiles.cl/">www.beneficiosestudiantiles.cl</a> sector Fechas Importantes.
+        </p>
+
+
+        <ul id="accordion" class="accordion">
+            <li>
+                <div class="link"><i class="fa fa-database"></i>Formulario Único de Acreditación Socioeconómica (FUAS)<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>
+                        <p class="pmenu">Gratuidad</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Nuevo Milenio</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Bicentenario</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Juan Gómez Millas</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Juan Gómez Millas Extranjeros</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Excelencia Técnica</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Excelencia Académica</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Puntaje Prueba de Transición Admisión Universitaria</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca para Hijos de Profesionales de la Educación</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca de Articulación</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca para Estudiantes en Situación de Discapacidad</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Continuidad de Estudios para Instituciones en Cierre</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca de Alimentación para la Educación Superior (JUNAEB)</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Fondo Solidario de Crédito Universitario</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Crédito con Garantía Estatal</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-code"></i>Formulario Beca Vocación de Profesor<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>
+                        <p class="pmenu">Beca Vocación de Profesor Pedagogías</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Vocación de Profesor Licenciaturas</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Vocación de Profesor Licenciados y Profesionales (Sujeta a aprobación de Ley de Presupuestos 2021)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-mobile"></i>Formulario Becas de Reparación<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li>
+                        <p class="pmenu">Beca Titulares Valech</p>
+                    </li>
+                    <li>
+                        <p class="pmenu">Beca Traspaso Valech</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <p class="text fw-bold py-3">El Gobierno de chile trabaja la gratuidad en base al valor de UF:
+            <b class="text" id="traerUf"></b>
+        </p>
+
+        <p class="text fw-bold py-3"><b>IMPORTANTE:</b> A partir del proceso de entrega de beneficios para el año 2021, los postulantes que no califiquen para gratuidad por su nivel socioeconómico y que deseen acceder al cobro del arancel reajustado, podrán solicitarlo a las instituciones
+            de Educación Superior adscritas a esta política, presentando su certificado de Registro Social de Hogares (RSH, <a class="textEnlace" href="http://www.registrosocial.gob.cl/">www.registrosocial.cl</a>).</p>
+
+
+    </div>
+
+    <!--FOOTER-->
+
+    <footer id="footer">
+        <div class="row text-center footer">
+            <div class="col-md-4 mt-3">
+                <img src="imagenes/Logo2.png" width="50 rem" alt="">
+            </div>
+            <div class="col-md-4">
+                <p class="textoFooter">Sitio Desarrollado por Alumnos de DuocUC</p>
+
+            </div>
+            <div class="col-md-4 mt-3">
+                <img class="imagenLogoFooter" src="imagenes/Logo1.jpg" width="100 rem" alt="">
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>

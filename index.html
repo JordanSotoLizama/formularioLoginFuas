@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Santos Customs</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#email").keyup(function() {
+                if (validateEmail()) {
+                    $("#email").css("border", "2px solid green");
+                    $("#emailMsg").html("<p class='text-success'>Email valido</p>");
+                } else {
+                    $("#email").css("border", "2px solid red");
+                    $("#emailMsg").html("<p class='text-danger'>Email no valido</p>");
+                }
+            });
+            $("#usuario").keyup(function() {
+                if (validateUsuario()) {
+                    $("#usuario").css("border", "2px solid green");
+                    $("#usuarioMsg").html("<p class='text-success'>Usuario valido</p>");
+                } else {
+                    $("#usuario").css("border", "2px solid red");
+                    $("#usuarioMsg").html("<p class='text-danger'>No valido, 5 caracteres minimo</p>");
+                }
+
+            });
+
+            $("#btn-logear").on("click", function() {
+
+
+
+                /* $(location).attr('href', 'https://jquery.com'); */
+                var usuario = $("#usuario").val();
+                var email = $("#email").val();
+
+                if (usuario == 'admin123' && email == 'admin@duoc.cl') {
+
+                    /* $(location).attr('href', 'https://jquery.com'); */
+                    window.location.href = "home.html";
+                    /* alert('el usuario es correcto'); */
+
+                } else {
+                    alert('Usuario o Correo inválidos');
+                }
+            });
+        });
+
+        function validateEmail() {
+            var email = $("#email").val();
+            var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+            if (reg.test(email)) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        function validateUsuario() {
+            var user = $("#usuario").val();
+            if (user.length > 5) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/Logo1.jpg" alt="Fuas 2021 Img" width="150 rem">
+                <img src="imagenes/Logo2.png" alt="Ministerio de educación Img" width="65 rem">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="informacion.html">Información</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--LOGIN-->
+    <div class="container caja w-75  mt-5 mb-5 rounded shadow">
+        <div class="row align-items-stretch">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+
+            </div>
+            <div class="col p-5 rounded-end">
+                <div class="text-end">
+                    <img src="imagenes/Logo1.jpg" width="200 rem" alt="Fuas 2021 Img">
+                    <img src="imagenes/Logo2.png" width="85 rem" alt="Ministerio de educación Img">
+                </div>
+
+                <h2 class="text fw-bold text-center py-5">Bienvenido</h2>
+
+                <form id="basic-form" action="#">
+                    <div class="mb-4">
+                        <label for="input" class="text form-label">Usuario </label>
+                        <input type="input" id="usuario" class="form-control" name="input">
+                        <span id="usuarioMsg"></span>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="text form-label">Correo lectrónico </label>
+                        <input type="email" id="email" class="form-control" name="email">
+                        <span id="emailMsg"></span>
+                    </div>
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" name="connected" class="form-check-input">
+                        <label for="connected" class="text form-check-label">Mantener conectado</label>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="button" id="btn-logear" class="btn btn-primary">Iniciar Sesión</button>
+                    </div>
+
+                    <div class="my-3">
+                        <span class="text">¿Se te olvido la contraseña? <a href="#">Recuperar Password</a></span>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <footer id="footer">
+        <div class="row text-center footer">
+            <div class="col-md-4 mt-3">
+                <img src="imagenes/Logo2.png" width="50 rem" alt="">
+            </div>
+            <div class="col-md-4">
+                <p class="textoFooter">Sitio Desarrollado por Alumnos de DuocUC</p>
+
+            </div>
+            <div class="col-md-4 mt-3">
+                <img class="imagenLogoFooter" src="imagenes/Logo1.jpg" width="100 rem" alt="">
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+</body>
+
+</html>
